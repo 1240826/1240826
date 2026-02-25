@@ -41,7 +41,7 @@ I'm a 19-year-old Software Engineering student at ISEP who loves technology, pro
 
 <div align="center">
 
-![Fábio's GitHub Stats](https://github-readme-stats.vercel.app/api?username=1240826&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true)
+![Fábio's GitHub Stats](https://github-readme-stats.vercel.app/api?username=1240826&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
 
 </div>
 
