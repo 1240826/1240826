@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Fábio Costa - Informatics Engineering Student at ISEP">
+  <title>Fábio Costa - Informatics Engineering Student at ISEP</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1f"/>
+      <stop offset="55%" stop-color="#131a3a"/>
+      <stop offset="100%" stop-color="#1c2b4d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#c7d2fe"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="60%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="300" fill="url(#bg)"/>
+  <circle cx="1010" cy="70" r="230" fill="url(#glow1)"/>
+  <circle cx="1120" cy="265" r="190" fill="url(#glow2)"/>
+
+  <!-- faint code motif -->
+  <g font-family="'Cascadia Code','Consolas','Menlo','DejaVu Sans Mono',monospace" fill="#ffffff" fill-opacity="0.05">
+    <text x="1010" y="205" font-size="190" font-weight="700">{ }</text>
+  </g>
+
+  <!-- left accent bar -->
+  <rect x="0" y="0" width="6" height="300" fill="url(#accent)"/>
+
+  <!-- prompt line -->
+  <g font-family="'Cascadia Code','Consolas','Menlo','DejaVu Sans Mono',monospace">
+    <text x="80" y="96" font-size="23" fill="#7dd3fc">&gt; hi, i&#8217;m</text>
+  </g>
+
+  <!-- name -->
+  <text x="78" y="172" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="72" font-weight="700" fill="url(#nameGrad)">F&#225;bio Costa</text>
+
+  <!-- subtitle -->
+  <text x="80" y="222" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="27" fill="#cbd5e1">Informatics Engineering &#183; <tspan fill="#22d3ee" font-weight="600">ISEP</tspan></text>
+
+  <!-- focus line -->
+  <text x="80" y="259" font-family="'Cascadia Code','Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="19" fill="#7c8aa5">backend &#183; systems &#183; cloud &#183; automation</text>
+
+  <!-- rule -->
+  <rect x="80" y="276" width="620" height="3" rx="1.5" fill="url(#rule)"/>
+</svg>

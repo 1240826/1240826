@@ -1,4 +1,4 @@
-![Banner GitHub](https://github.com/1240826/About-me/blob/main/banner.gif)
+![Banner GitHub](https://raw.githubusercontent.com/1240826/1240826/main/banner.svg)
 
 # Hi, I'm Fábio Costa
 
@@ -59,7 +59,10 @@ I'm a 19-year-old Informatics Engineering student at ISEP who loves backend and 
 
 ## 📈 Contribution Activity
 
-[![Fábio's GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=1240826&theme=tokyo-night&hide_border=true&area=true)](https://github.com/1240826)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/1240826/1240826/output/snake-dark.svg">
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/1240826/1240826/output/snake.svg">
+</picture>
 
 ---
 
