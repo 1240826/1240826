@@ -1,8 +1,6 @@
 ![Banner GitHub](https://raw.githubusercontent.com/1240826/1240826/main/banner.svg)
 
-# Hi, I'm Fábio Costa
-
-I'm a 19-year-old Informatics Engineering student at ISEP who loves backend and systems-level problem-solving, and enjoys turning complex ideas into working software. Currently exploring cloud, automation and full-stack development — always eager to learn and take on new challenges!
+I'm a 19-year-old Informatics Engineering student at ISEP who loves backend and systems-level problem-solving, and enjoys turning complex ideas into working software. Always eager to learn and take on new challenges!
 
 ---
 
@@ -49,9 +47,9 @@ I'm a 19-year-old Informatics Engineering student at ISEP who loves backend and 
 
 ## 🚀 Featured Projects
 
-- **[AISafe](https://portfolio-fabio-costa.netlify.app/)** — Air traffic control back-office system: Java/JavaFX backend, custom ANTLR4 DSL, C flight-simulation engine, GitHub Actions CI/CD, cross-platform Bash/.bat scripts
-- **[ProofPocket](https://portfolio-fabio-costa.netlify.app/)** — AI-powered phishing detection built in a 46h hackathon: Chrome Extension + React Native app, integrated with a serverless AWS API
-- **[Logistics on Rails](https://portfolio-fabio-costa.netlify.app/)** — Railway management system: Java, PL/SQL, RISC-V Assembly, Oracle DB
+- **[AISafe](https://github.com/1240826/aisafe-flight-control)** — Air traffic control back-office system: Java/JavaFX backend, custom ANTLR4 DSL, C flight-simulation engine, GitHub Actions CI/CD, cross-platform Bash/.bat scripts
+- **[ProofPocket](https://github.com/1240826/proofpocket)** — AI-powered phishing detection built in a 46h hackathon: Chrome Extension + React Native app, integrated with a serverless AWS API
+- **[Logistics on Rails](https://github.com/1240826/logistics-railway)** — Railway management system: Java, PL/SQL, RISC-V Assembly, Oracle DB
 
 *See my [portfolio](https://portfolio-fabio-costa.netlify.app/) for full details on all projects.*
 
