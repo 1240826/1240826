@@ -1,4 +1,4 @@
-![Banner GitHub](https://raw.githubusercontent.com/1240826/1240826/main/banner.svg)
+![Banner GitHub](https://raw.githubusercontent.com/1240826/1240826/main/banner.svg?v=2)
 
 I'm a 19-year-old Informatics Engineering student at ISEP who loves backend and systems-level problem-solving, and enjoys turning complex ideas into working software. Always eager to learn and take on new challenges!
 
