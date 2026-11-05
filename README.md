@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/1240826/1240826/main/terminal.svg?v=2" alt="Terminal: whoami. Fábio Costa, informatics engineering at ISEP, Porto. Interests: backend, systems, security, AI, football." width="860">
+<img src="https://raw.githubusercontent.com/1240826/1240826/main/terminal.svg?v=3" alt="Terminal: whoami. Fábio Costa, computer engineering at ISEP, Porto. Interests: backend, systems, security, AI, football." width="860">
 
 <br>
 
@@ -10,7 +10,7 @@
 
 <br>
 
-Informatics Engineering student at ISEP, in Porto. I'm most at home in backend and systems work, and increasingly drawn to security and AI. I like understanding why something works, not just getting it to run, and I learn best by building, ideally in a team.
+Computer Engineering student at ISEP, in Porto. I'm most at home in backend and systems work, and increasingly drawn to security and AI. I like understanding why something works, not just getting it to run, and I learn best by building, ideally in a team.
 
 ## `~/now`
 
@@ -159,7 +159,7 @@ Built during the Erasmus+ programme at Politehnica University of Timisoara, in a
 
 ## `~/background`
 
-- 🎓 **BSc in Informatics Engineering**, ISEP (2024 – 2027)
+- 🎓 **BSc in Computer Engineering**, ISEP (2024 – 2027)
 - 🌍 **Erasmus+ programme**, Politehnica University of Timisoara (Jul – Aug 2025)
 - 🏁 **Hackathons:** CodeSpring 2026 at ISEP (46h), Code Forward by Blip (2025)
 - 🤝 **NEI-ISEP**, events team (2025 – 2026) · volunteer at SIMCONF 2025
@@ -172,11 +172,3 @@ Built during the Erasmus+ programme at Politehnica University of Timisoara, in a
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/1240826/1240826/output/snake-dark.svg">
   <img alt="Contribution snake" src="https://raw.githubusercontent.com/1240826/1240826/output/snake.svg">
 </picture>
-
-<div align="center">
-
-<br>
-
-<img src="https://raw.githubusercontent.com/1240826/1240826/main/tmux-bar.svg?v=2" alt="Status bar: Porto, ISEP, 2026" width="860">
-
-</div>
