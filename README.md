@@ -4,7 +4,7 @@
 
 <br>
 
-[**portfolio**](https://portfolio-fabio-costa.netlify.app) &nbsp;·&nbsp; [**linkedin**](https://www.linkedin.com/in/f%C3%A1bio-rafael-costa-a791812b1/) &nbsp;·&nbsp; [**email**](mailto:fabiorcosta12@gmail.com)
+[**portfolio**](https://portfolio-fabio-costa.netlify.app) &nbsp;·&nbsp; [**linkedin**](https://www.linkedin.com/in/fabio-rb-costa/) &nbsp;·&nbsp; [**email**](mailto:fabiorcosta12@gmail.com)
 
 </div>
 
