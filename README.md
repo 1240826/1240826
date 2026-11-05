@@ -1,28 +1,113 @@
 <div align="center">
 
-![Banner GitHub](https://raw.githubusercontent.com/1240826/1240826/main/banner.svg?v=3)
+<img src="https://raw.githubusercontent.com/1240826/1240826/main/terminal.svg?v=1" alt="Terminal: whoami. Fábio Costa, informatics engineering at ISEP, Porto. Interests: backend, systems, security, AI, football." width="860">
 
-**Informatics Engineering student at ISEP, Porto.**
-I like knowing what happens under the hood, and turning hard problems into software that works.
+<br>
 
-[Portfolio](https://portfolio-fabio-costa.netlify.app) · [LinkedIn](https://www.linkedin.com/in/f%C3%A1bio-rafael-costa-a791812b1/) · [Email](mailto:fabiorcosta12@gmail.com)
+[**portfolio**](https://portfolio-fabio-costa.netlify.app) &nbsp;·&nbsp; [**linkedin**](https://www.linkedin.com/in/f%C3%A1bio-rafael-costa-a791812b1/) &nbsp;·&nbsp; [**email**](mailto:fabiorcosta12@gmail.com)
 
 </div>
 
----
+<br>
+
+I'm an Informatics Engineering student at ISEP, in Porto. I like knowing what happens under the hood, so I keep ending up in places like a C process talking over TCP, a RISC-V register, or a Lambda deciding if a link is safe. I'm curious about backend, security and AI, and I learn best by building the thing.
+
+## `~/now`
 
 ```console
-fabio@porto:~$ whoami
-fabio-costa — informatics engineering, 3rd year @ ISEP
-
-fabio@porto:~$ ls interests/
-backend/  systems/  security/  ai/  football/
-
-fabio@porto:~$ cat motto
-learn the thing properly, then build it properly.
+$ cat now.txt
+building    LaPrizza, a pizza shop backend (products, stock, users, end-to-end tests)
+tinkering   this profile and a new portfolio, in terminal style
+following   backend, security and AI, in no particular order
 ```
 
-## 💻 Languages
+## `~/projects`
+
+| | Project | What it is | Built with |
+|---|---|---|---|
+| ✈️ | **[AISafe](https://github.com/1240826/aisafe-flight-control)** | Air traffic control back office with a custom flight-plan DSL and a C simulation engine. Team of 5, Scrum, CI/CD. | Java · JavaFX · ANTLR4 · C · TCP/UDP |
+| 🛡️ | **[ProofPocket](https://github.com/1240826/proofpocket)** | Checks links, emails and messages for phishing before you open them. 46h hackathon. | TypeScript · React Native · AWS · Bedrock |
+| 🚂 | **[Logistics on Rails](https://github.com/1240826/logistics-railway)** | Warehouse, freight and station management for railways, from SQL down to Assembly. | Java · PL/SQL · Oracle · C · RISC-V |
+| 🎮 | **[Empire on Tracks](https://github.com/1240826/empire-on-tracks)** | Railway simulation game with a map editor. | Java · JavaFX · Python |
+| 🧑 | **[Eigenfaces](https://github.com/1240826/eigenfaces-recognition)** | Face reconstruction and identification with PCA, no ML libraries. | Java · linear algebra |
+| 🐉 | **[Dracomania](https://github.com/BlessedTeam1/The_Best_Game)** | 2D game made in an international Erasmus+ team. | Unity · C# |
+
+<details>
+<summary><code>man aisafe</code> &nbsp;·&nbsp; how it works</summary>
+
+<br>
+
+- **Backend (Java 21):** layered domain-driven design, JPA persistence, role-based access control and 20+ JavaFX screens for aircraft, flights, airports, weather and staff.
+- **DSL (ANTLR4):** a language for describing flight plans, parsed and validated.
+- **Simulation (C):** multi-process engine with collision detection, with POSIX shared memory and semaphores.
+- **Remote access:** TCP/UDP between components.
+- **Delivery:** GitHub Actions CI/CD, cross-platform Bash and batch scripts, 5-person Scrum team.
+
+```mermaid
+flowchart LR
+    GUI["JavaFX back office<br/>20+ screens"] --> APP["Java 21 backend<br/>DDD · roles"]
+    APP --> DB[("PostgreSQL<br/>JPA / Hibernate")]
+    APP --> DSL["ANTLR4 DSL<br/>flight plans"]
+    APP <-->|"TCP / UDP"| SIM["C simulation engine<br/>collision detection"]
+    CI["GitHub Actions<br/>build + tests"] -.-> APP
+```
+
+</details>
+
+<details>
+<summary><code>man proofpocket</code> &nbsp;·&nbsp; how it works</summary>
+
+<br>
+
+1. You submit a link, email or message from the **Chrome extension** or the **Android app** (these two were my part).
+2. API Gateway authenticates with Cognito, then an orchestrator Lambda creates a job in DynamoDB and queues it in SQS.
+3. A worker checks a 7-day cache; on a miss, a validator Lambda asks Amazon Bedrock for a risk score, a decision (`allow` / `review` / `block`) and the reasons.
+4. The extension blocks the link before it opens and shows why.
+
+```mermaid
+flowchart LR
+    C["Chrome extension<br/>Android app"] --> G["API Gateway<br/>Cognito JWT"]
+    G --> O["Orchestrator<br/>Lambda"]
+    O --> J[("DynamoDB<br/>jobs")]
+    O --> Q["SQS queue"]
+    Q --> W["Worker<br/>Lambda"]
+    W <--> K[("URL cache<br/>7-day TTL")]
+    W --> V["Validator<br/>Lambda"]
+    V --> B["Amazon Bedrock<br/>risk score + reasons"]
+```
+
+</details>
+
+<details>
+<summary><code>man logistics-railway</code> &nbsp;·&nbsp; how it works</summary>
+
+<br>
+
+- **Warehouse (Java):** FEFO/FIFO order allocation and shortest picking paths.
+- **Database (PL/SQL, Oracle):** schema, stored procedures and triggers for freight scheduling.
+- **Network (C):** 2D-trees, Haversine distance, hub centrality and max flow on a railway graph.
+- **Low level (RISC-V Assembly):** circular buffer, moving median filter and Caesar cipher, wired to Arduino sensors.
+
+```mermaid
+flowchart TB
+    subgraph JAVA["Java"]
+        WH["Warehouse<br/>FEFO / FIFO, picking paths"]
+    end
+    subgraph SQL["Oracle + PL/SQL"]
+        DBL[("Schema, procedures,<br/>triggers")]
+    end
+    subgraph SYS["C + RISC-V Assembly"]
+        ST["Station management<br/>buffers, filters, cipher"]
+        NET["Network analysis<br/>2D-trees, hubs, max flow"]
+    end
+    HW["Arduino sensors<br/>temperature, humidity"]
+    WH --> DBL
+    ST <--> HW
+```
+
+</details>
+
+## `~/stack`
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
@@ -34,8 +119,6 @@ learn the thing properly, then build it properly.
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Assembly](https://img.shields.io/badge/Assembly-654FF0?style=for-the-badge&logo=assemblyscript&logoColor=white)
-
-## 🛠️ Tools & Technologies
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
@@ -53,38 +136,33 @@ learn the thing properly, then build it properly.
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 
-## 🚀 Featured Projects
+## `~/recent`
 
-| Project | What it is | Built with |
-|---|---|---|
-| **[AISafe](https://github.com/1240826/aisafe-flight-control)** | Air traffic control back office with a custom flight-plan DSL and a C simulation engine. Team of 5, Scrum, CI/CD. | Java · JavaFX · ANTLR4 · C · TCP/UDP · GitHub Actions |
-| **[ProofPocket](https://github.com/1240826/proofpocket)** | Checks links, emails and messages for phishing before you open them. Built in a 46h hackathon. | TypeScript · React Native · AWS Lambda · Bedrock |
-| **[Logistics on Rails](https://github.com/1240826/logistics-railway)** | Warehouse, freight and station management for railways, from SQL down to Assembly. | Java · PL/SQL · Oracle · C · RISC-V |
-| **[Empire on Tracks](https://github.com/1240826/empire-on-tracks)** | Railway simulation game with a map editor. | Java · JavaFX · Python |
-| **[Eigenfaces](https://github.com/1240826/eigenfaces-recognition)** | Face reconstruction and identification with PCA, no ML libraries. | Java · linear algebra |
-| **[Dracomania](https://github.com/BlessedTeam1/The_Best_Game)** | 2D game made in an international Erasmus+ team. | Unity · C# |
+<!-- RECENT:START -->
+```console
+$ git log --oneline --all --author=fabio -n 6
+(updated automatically)
+```
+<!-- RECENT:END -->
 
-## 🎯 Skills
-
-- **Software Development** → OOP, Design Patterns, MVC, Domain-Driven Design
-- **DevOps & Automation** → CI/CD (GitHub Actions), cross-platform scripting (Bash / Windows batch), Linux & Windows
-- **Systems Programming** → Multi-process and multi-threaded C, POSIX (shared memory, semaphores), TCP/UDP
-- **Cloud** → AWS serverless (Lambda, DynamoDB, Bedrock)
-- **Project Management** → Agile, Scrum, team collaboration
-- **Problem Solving** → Algorithms, data structures, optimization
-- **Languages** → Portuguese (native), English (Cambridge B2), French (basic)
-
-## 📈 Contribution Activity
+## `~/activity`
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/1240826/1240826/output/snake-dark.svg">
   <img alt="Contribution snake" src="https://raw.githubusercontent.com/1240826/1240826/output/snake.svg">
 </picture>
 
----
+## `~/contact`
+
+```console
+$ mail fabio
+portfolio  https://portfolio-fabio-costa.netlify.app
+linkedin   https://www.linkedin.com/in/f%C3%A1bio-rafael-costa-a791812b1/
+email      fabiorcosta12@gmail.com
+```
 
 <div align="center">
 
-📧 fabiorcosta12@gmail.com · 🌐 [portfolio-fabio-costa.netlify.app](https://portfolio-fabio-costa.netlify.app)
+<img src="https://raw.githubusercontent.com/1240826/1240826/main/tmux-bar.svg?v=1" alt="Status bar: Porto, ISEP, 2026" width="860">
 
 </div>
