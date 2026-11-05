@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="860" height="270" viewBox="0 0 860 270" role="img" aria-label="Terminal: whoami. Fábio Costa, Informatics Engineering student at ISEP. Interests: backend, systems, security, AI, football.">
-  <title>fabio@porto: ~</title>
+  <title>fabio@costa: ~</title>
   <style>
     :root { --bg:#1e1e2e; --bar:#181825; --fg:#cdd6f4; --dim:#6c7086; --green:#a6e3a1; --blue:#89b4fa; --mauve:#cba6f7; --peach:#fab387; --line:#313244; }
     @media (prefers-color-scheme: light) {
@@ -36,19 +36,19 @@
   <rect width="860" height="270" rx="12" fill="var(--bg)"/>
   <path d="M0 12a12 12 0 0 1 12-12h836a12 12 0 0 1 12 12v22H0z" fill="var(--bar)"/>
   <circle cx="24" cy="17" r="6" fill="#f38ba8"/><circle cx="46" cy="17" r="6" fill="#f9e2af"/><circle cx="68" cy="17" r="6" fill="#a6e3a1"/>
-  <text x="430" y="22" text-anchor="middle" class="dim" style="font-size:13px">fabio@porto: ~</text>
+  <text x="430" y="22" text-anchor="middle" class="dim" style="font-size:13px">fabio@costa: ~</text>
 
   <!-- line 1: command -->
-  <g clip-path="url(#c1)"><text x="30" y="70"><tspan class="g">fabio@porto</tspan><tspan class="dim">:</tspan><tspan class="b">~</tspan><tspan class="dim">$ </tspan>whoami</text></g>
+  <g clip-path="url(#c1)"><text x="30" y="70"><tspan class="g">fabio@costa</tspan><tspan class="dim">:</tspan><tspan class="b">~</tspan><tspan class="dim">$ </tspan>whoami</text></g>
   <!-- output 1 -->
   <g class="out1 hide2"><text x="30" y="108" class="name">Fábio Costa</text></g>
   <g clip-path="url(#c2)"><text x="30" y="122" class="dim" style="font-size:16px">informatics engineering · ISEP · Porto</text></g>
 
   <!-- line 3 -->
-  <g clip-path="url(#c3)"><text x="30" y="168"><tspan class="g">fabio@porto</tspan><tspan class="dim">:</tspan><tspan class="b">~</tspan><tspan class="dim">$ </tspan>ls interests/</text></g>
+  <g clip-path="url(#c3)"><text x="30" y="168"><tspan class="g">fabio@costa</tspan><tspan class="dim">:</tspan><tspan class="b">~</tspan><tspan class="dim">$ </tspan>ls interests/</text></g>
   <!-- output 3 -->
   <g clip-path="url(#c4)"><text x="30" y="202"><tspan class="m">backend/</tspan>  <tspan class="m">systems/</tspan>  <tspan class="m">security/</tspan>  <tspan class="m">ai/</tspan>  <tspan class="p">football/</tspan></text></g>
 
   <!-- prompt + cursor -->
-  <g class="hide4" style="animation-delay:5s"><text x="30" y="240"><tspan class="g">fabio@porto</tspan><tspan class="dim">:</tspan><tspan class="b">~</tspan><tspan class="dim">$ </tspan><tspan class="cursor">█</tspan></text></g>
+  <g class="hide4" style="animation-delay:5s"><text x="30" y="240"><tspan class="g">fabio@costa</tspan><tspan class="dim">:</tspan><tspan class="b">~</tspan><tspan class="dim">$ </tspan><tspan class="cursor">█</tspan></text></g>
 </svg>

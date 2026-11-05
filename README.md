@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/1240826/1240826/main/terminal.svg?v=1" alt="Terminal: whoami. Fábio Costa, informatics engineering at ISEP, Porto. Interests: backend, systems, security, AI, football." width="860">
+<img src="https://raw.githubusercontent.com/1240826/1240826/main/terminal.svg?v=2" alt="Terminal: whoami. Fábio Costa, informatics engineering at ISEP, Porto. Interests: backend, systems, security, AI, football." width="860">
 
 <br>
 
@@ -10,38 +10,34 @@
 
 <br>
 
-I'm an Informatics Engineering student at ISEP, in Porto. I like knowing what happens under the hood, so I keep ending up in places like a C process talking over TCP, a RISC-V register, or a Lambda deciding if a link is safe. I'm curious about backend, security and AI, and I learn best by building the thing.
+I'm an Informatics Engineering student at ISEP, in Porto. I like understanding how things work and building software that solves real problems: backend systems, databases, games, security tools. I learn best by building the thing, usually in a team.
 
 ## `~/now`
 
 ```console
 $ cat now.txt
-building    LaPrizza, a pizza shop backend (products, stock, users, end-to-end tests)
-tinkering   this profile and a new portfolio, in terminal style
-following   backend, security and AI, in no particular order
+building      LaPrizza, a restaurant information system for the 5th-semester project at ISEP:
+              C# / ASP.NET Core API, React web app, a 3D kitchen and kitchen scheduling in Prolog.
+              Team of 5, three sprints, currently on sprint 2
+curious about backend · security · AI
+off the clock football
 ```
 
 ## `~/projects`
 
-| | Project | What it is | Built with |
-|---|---|---|---|
-| ✈️ | **[AISafe](https://github.com/1240826/aisafe-flight-control)** | Air traffic control back office with a custom flight-plan DSL and a C simulation engine. Team of 5, Scrum, CI/CD. | Java · JavaFX · ANTLR4 · C · TCP/UDP |
-| 🛡️ | **[ProofPocket](https://github.com/1240826/proofpocket)** | Checks links, emails and messages for phishing before you open them. 46h hackathon. | TypeScript · React Native · AWS · Bedrock |
-| 🚂 | **[Logistics on Rails](https://github.com/1240826/logistics-railway)** | Warehouse, freight and station management for railways, from SQL down to Assembly. | Java · PL/SQL · Oracle · C · RISC-V |
-| 🎮 | **[Empire on Tracks](https://github.com/1240826/empire-on-tracks)** | Railway simulation game with a map editor. | Java · JavaFX · Python |
-| 🧑 | **[Eigenfaces](https://github.com/1240826/eigenfaces-recognition)** | Face reconstruction and identification with PCA, no ML libraries. | Java · linear algebra |
-| 🐉 | **[Dracomania](https://github.com/BlessedTeam1/The_Best_Game)** | 2D game made in an international Erasmus+ team. | Unity · C# |
-
 <details>
-<summary><code>man aisafe</code> &nbsp;·&nbsp; how it works</summary>
+<summary><b>✈️ AISafe</b> &nbsp;—&nbsp; air traffic control back office with its own flight-plan language</summary>
 
 <br>
 
-- **Backend (Java 21):** layered domain-driven design, JPA persistence, role-based access control and 20+ JavaFX screens for aircraft, flights, airports, weather and staff.
-- **DSL (ANTLR4):** a language for describing flight plans, parsed and validated.
-- **Simulation (C):** multi-process engine with collision detection, with POSIX shared memory and semaphores.
-- **Remote access:** TCP/UDP between components.
-- **Delivery:** GitHub Actions CI/CD, cross-platform Bash and batch scripts, 5-person Scrum team.
+`Java 21` `JavaFX` `JPA / Hibernate` `PostgreSQL` `ANTLR4` `C` `TCP / UDP` `GitHub Actions`
+
+Team of 5, Scrum, 4th-semester integrative project at ISEP.
+
+- **Back office (Java):** layered domain-driven design, role-based access control and 20+ JavaFX screens for aircraft, flights, airports, weather and staff.
+- **Flight-plan DSL (ANTLR4):** a small language for describing flight plans.
+- **Simulation (C):** flight engine with collision detection, with remote access over TCP/UDP.
+- **Delivery:** GitHub Actions CI/CD, cross-platform Bash and batch scripts.
 
 ```mermaid
 flowchart LR
@@ -52,41 +48,47 @@ flowchart LR
     CI["GitHub Actions<br/>build + tests"] -.-> APP
 ```
 
+**[→ repository](https://github.com/1240826/aisafe-flight-control)**
+
 </details>
 
 <details>
-<summary><code>man proofpocket</code> &nbsp;·&nbsp; how it works</summary>
+<summary><b>🛡️ ProofPocket</b> &nbsp;—&nbsp; checks links, emails and messages for phishing before you open them</summary>
 
 <br>
 
-1. You submit a link, email or message from the **Chrome extension** or the **Android app** (these two were my part).
-2. API Gateway authenticates with Cognito, then an orchestrator Lambda creates a job in DynamoDB and queues it in SQS.
-3. A worker checks a 7-day cache; on a miss, a validator Lambda asks Amazon Bedrock for a risk score, a decision (`allow` / `review` / `block`) and the reasons.
-4. The extension blocks the link before it opens and shows why.
+`TypeScript` `React` `React Native` `Chrome Extension (MV3)`
+
+Built in 46 hours at the CodeSpring 2026 hackathon (team DevUnleashed).
+
+- **My part:** the Chrome extension, which intercepts a link before it opens, and the Android app. Both talk to the team's backend.
+- **Backend (team):** serverless on AWS with a generative AI model that returns a risk score, a decision (`allow` / `review` / `block`) and the reasons. I integrated with it but did not build it.
 
 ```mermaid
 flowchart LR
-    C["Chrome extension<br/>Android app"] --> G["API Gateway<br/>Cognito JWT"]
-    G --> O["Orchestrator<br/>Lambda"]
-    O --> J[("DynamoDB<br/>jobs")]
-    O --> Q["SQS queue"]
-    Q --> W["Worker<br/>Lambda"]
-    W <--> K[("URL cache<br/>7-day TTL")]
-    W --> V["Validator<br/>Lambda"]
-    V --> B["Amazon Bedrock<br/>risk score + reasons"]
+    U["You click a link,<br/>or paste a message"] --> C["Chrome extension<br/>Android app<br/>(my part)"]
+    C -->|"scan request"| B["Team backend<br/>serverless + AI risk scoring"]
+    B -->|"score + reasons"| C
+    C --> R["allow · review · block<br/>shown before the link opens"]
 ```
+
+**[→ repository](https://github.com/1240826/proofpocket)**
 
 </details>
 
 <details>
-<summary><code>man logistics-railway</code> &nbsp;·&nbsp; how it works</summary>
+<summary><b>🚂 Logistics on Rails</b> &nbsp;—&nbsp; warehouse, freight and station management for railways</summary>
 
 <br>
+
+`Java` `PL/SQL` `Oracle` `C` `RISC-V Assembly` `Arduino`
+
+Team project, 3rd-semester integrative project at ISEP.
 
 - **Warehouse (Java):** FEFO/FIFO order allocation and shortest picking paths.
 - **Database (PL/SQL, Oracle):** schema, stored procedures and triggers for freight scheduling.
 - **Network (C):** 2D-trees, Haversine distance, hub centrality and max flow on a railway graph.
-- **Low level (RISC-V Assembly):** circular buffer, moving median filter and Caesar cipher, wired to Arduino sensors.
+- **Low level (RISC-V Assembly):** circular buffer, moving median filter and Caesar cipher, connected to Arduino sensors.
 
 ```mermaid
 flowchart TB
@@ -105,36 +107,62 @@ flowchart TB
     ST <--> HW
 ```
 
+**[→ repository](https://github.com/1240826/logistics-railway)**
+
+</details>
+
+<details>
+<summary><b>🎮 Empire on Tracks</b> &nbsp;—&nbsp; railway simulation game with a map editor</summary>
+
+<br>
+
+`Java` `JavaFX` `Python` `JUnit`
+
+2nd-semester integrative project, inspired by Railroad Tycoon 2. Two modes: a map editor (cities, industries, stations, tracks) and a simulation where you run a railway company and move cargo. MVC and design patterns, with a Python module for statistics.
+
+**[→ repository](https://github.com/1240826/empire-on-tracks)**
+
+</details>
+
+<details>
+<summary><b>🧑 Eigenfaces</b> &nbsp;—&nbsp; face reconstruction and identification, no ML libraries</summary>
+
+<br>
+
+`Java` `Linear algebra`
+
+PCA implemented from scratch: mean face, covariance matrix, eigenvectors by power iteration, then reconstruction, identification and generation of faces. All matrix maths in pure Java.
+
+**[→ repository](https://github.com/1240826/eigenfaces-recognition)**
+
+</details>
+
+<details>
+<summary><b>🐉 Dracomania</b> &nbsp;—&nbsp; 2D game made in an international team</summary>
+
+<br>
+
+`Unity` `C#`
+
+Built during the Erasmus+ programme at Politehnica University of Timisoara, in a team from several countries.
+
+**[→ repository](https://github.com/BlessedTeam1/The_Best_Game)**
+
 </details>
 
 ## `~/stack`
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Assembly](https://img.shields.io/badge/Assembly-654FF0?style=for-the-badge&logo=assemblyscript&logoColor=white)
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=java,c,py,ts,js,cs,html,css&theme=light">
+  <img alt="Java, C, Python, TypeScript, JavaScript, C#, HTML, CSS" src="https://skillicons.dev/icons?i=java,c,py,ts,js,cs,html,css&theme=dark">
+</picture>
 
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![JavaFX](https://img.shields.io/badge/JavaFX-EA2D2E?style=for-the-badge&logo=java&logoColor=white)
-![Unity](https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
-![PL/SQL](https://img.shields.io/badge/PL%2FSQL-F80000?style=for-the-badge&logo=oracle&logoColor=white)
-![ANTLR4](https://img.shields.io/badge/ANTLR4-2C3E50?style=for-the-badge)
-![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=git,github,githubactions,linux,bash,postgres,react,unity,arduino&theme=light">
+  <img alt="Git, GitHub, GitHub Actions, Linux, Bash, PostgreSQL, React, Unity, Arduino" src="https://skillicons.dev/icons?i=git,github,githubactions,linux,bash,postgres,react,unity,arduino&theme=dark">
+</picture>
+
+<sub>Also: SQL · PL/SQL · Oracle · JavaFX · ANTLR4 · RISC-V Assembly · React Native</sub>
 
 ## `~/recent`
 
@@ -157,17 +185,10 @@ bfc83cf  2026-07-11  logistics-railway      Fix formatting in README architectur
   <img alt="Contribution snake" src="https://raw.githubusercontent.com/1240826/1240826/output/snake.svg">
 </picture>
 
-## `~/contact`
-
-```console
-$ mail fabio
-portfolio  https://portfolio-fabio-costa.netlify.app
-linkedin   https://www.linkedin.com/in/f%C3%A1bio-rafael-costa-a791812b1/
-email      fabiorcosta12@gmail.com
-```
-
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/1240826/1240826/main/tmux-bar.svg?v=1" alt="Status bar: Porto, ISEP, 2026" width="860">
+<br>
+
+<img src="https://raw.githubusercontent.com/1240826/1240826/main/tmux-bar.svg?v=2" alt="Status bar: Porto, ISEP, 2026" width="860">
 
 </div>
