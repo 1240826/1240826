@@ -10,18 +10,11 @@
 
 <br>
 
-I'm an Informatics Engineering student at ISEP, in Porto. I like understanding how things work and building software that solves real problems: backend systems, databases, games, security tools. I learn best by building the thing, usually in a team.
+Informatics Engineering student at ISEP, in Porto. I'm most at home in backend and systems work, and increasingly drawn to security and AI. I like understanding why something works, not just getting it to run, and I learn best by building, ideally in a team.
 
 ## `~/now`
 
-```console
-$ cat now.txt
-building      LaPrizza, a restaurant information system for the 5th-semester project at ISEP:
-              C# / ASP.NET Core API, React web app, a 3D kitchen and kitchen scheduling in Prolog.
-              Team of 5, three sprints, currently on sprint 2
-curious about backend · security · AI
-off the clock football
-```
+<img src="https://raw.githubusercontent.com/1240826/1240826/main/now.svg?v=1" alt="cat now.txt. Building LaPrizza, a restaurant information system for the 5th-semester project at ISEP, team of 5: C# and ASP.NET Core API, React web app, 3D kitchen, Prolog scheduling. Curious about backend, security and AI. Off the clock: football." width="860">
 
 ## `~/projects`
 
@@ -164,19 +157,14 @@ Built during the Erasmus+ programme at Politehnica University of Timisoara, in a
 
 <sub>Also: SQL · PL/SQL · Oracle · JavaFX · ANTLR4 · RISC-V Assembly · React Native</sub>
 
-## `~/recent`
+## `~/background`
 
-<!-- RECENT:START -->
-```console
-$ git log --oneline --all --author=fabio -n 6
-41b698a  2026-07-11  empire-on-tracks       Fix formatting in README.md for MVC section
-bfc83cf  2026-07-11  logistics-railway      Fix formatting in README architecture section
-13f253b  2026-07-11  aisafe-flight-control  Update readme.md
-4accc0d  2026-07-11  aisafe-flight-control  Fix table alignment in readme.md
-9afad37  2026-07-11  aisafe-flight-control  Update architecture diagram in README
-511baaf  2026-07-11  aisafe-flight-control  Update architecture diagram in README
-```
-<!-- RECENT:END -->
+- 🎓 **BSc in Informatics Engineering**, ISEP (2024 – 2027)
+- 🌍 **Erasmus+ programme**, Politehnica University of Timisoara (Jul – Aug 2025)
+- 🏁 **Hackathons:** CodeSpring 2026 at ISEP (46h), Code Forward by Blip (2025)
+- 🤝 **NEI-ISEP**, events team (2025 – 2026) · volunteer at SIMCONF 2025
+- 📄 **Co-author** of a paper on teaching Taylor/Maclaurin series, SEI'24 symposium
+- 🗣️ Portuguese (native) · English (B2) · French (basic)
 
 ## `~/activity`
 

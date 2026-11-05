@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="262" viewBox="0 0 900 262" role="img" aria-label="cat now.txt. building: LaPrizza, a restaurant information system for the 5th-semester project at ISEP, team of 5. C# and ASP.NET Core API, React web app, 3D kitchen, Prolog scheduling. Curious about: backend, security, AI. Off the clock: football.">
+  <title>cat now.txt</title>
+  <style>
+    :root { --bg:#1e1e2e; --bar:#181825; --fg:#cdd6f4; --dim:#6c7086; --green:#a6e3a1; --blue:#89b4fa; --mauve:#cba6f7; --peach:#fab387; }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#eff1f5; --bar:#e6e9ef; --fg:#4c4f69; --dim:#8c8fa1; --green:#40a02b; --blue:#1e66f5; --mauve:#8839ef; --peach:#fe640b; }
+    }
+    text { font-family:'JetBrains Mono','Cascadia Code','Consolas','DejaVu Sans Mono',monospace; font-size:16px; fill:var(--fg); white-space:pre; }
+    .dim{fill:var(--dim)} .g{fill:var(--green)} .b{fill:var(--blue)}
+    .k{font-weight:700}
+    .m{fill:var(--mauve)} .bl{fill:var(--blue)} .p{fill:var(--peach)}
+  </style>
+  <rect width="900" height="262" rx="12" fill="var(--bg)"/>
+  <path d="M0 12a12 12 0 0 1 12-12h876a12 12 0 0 1 12 12v22H0z" fill="var(--bar)"/>
+  <circle cx="24" cy="17" r="6" fill="#f38ba8"/><circle cx="46" cy="17" r="6" fill="#f9e2af"/><circle cx="68" cy="17" r="6" fill="#a6e3a1"/>
+  <text x="450" y="22" text-anchor="middle" class="dim" style="font-size:13px">fabio@costa: ~</text>
+
+  <text x="30" y="68"><tspan class="g k">fabio@costa</tspan><tspan class="dim">:</tspan><tspan class="b">~</tspan><tspan class="dim">$ </tspan>cat now.txt</text>
+
+  <text x="30" y="106" class="k m">building</text>
+  <text x="200" y="106">LaPrizza, a restaurant information system (ISEP, team of 5)</text>
+  <text x="200" y="132">C# / ASP.NET Core API, React web app, 3D kitchen, Prolog scheduling</text>
+  <text x="200" y="158" class="dim">currently on sprint 2 of 3</text>
+
+  <text x="30" y="196" class="k bl">curious about</text>
+  <text x="200" y="196">backend · security · AI</text>
+
+  <text x="30" y="226" class="k p">off the clock</text>
+  <text x="200" y="226">football</text>
+</svg>
